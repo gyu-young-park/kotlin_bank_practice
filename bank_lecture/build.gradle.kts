@@ -18,7 +18,15 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web:3.2.3")
     runtimeOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
+    // Mysql
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     testImplementation(kotlin("test"))
+
+    // Mongo
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 }
 
 kotlin {
