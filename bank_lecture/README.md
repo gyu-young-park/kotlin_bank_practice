@@ -1,3 +1,16 @@
+## mysql docker 설정
+
+```shell
+docker run -d \
+  --name mysql-bank \
+  -e MYSQL_ROOT_PASSWORD=root \
+  -e MYSQL_DATABASE=bank \
+  -p 3306:3306 \
+  mysql:8.0 \
+  --character-set-server=utf8mb4 \
+  --collation-server=utf8mb4_unicode_ci
+
+```
 
 ## Kotlin에서 JPA 설정
 

@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 @Entity
 data class Account(
     @Id
-    @Column(name = "ulid", length = 12, nullable = false)
+    @Column(name = "ulid", length = 26, nullable = false)
     val ulid: String,
 
     // TODO

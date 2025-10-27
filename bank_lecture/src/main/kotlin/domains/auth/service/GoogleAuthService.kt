@@ -32,9 +32,12 @@ class GoogleAuthService(
             .add("client_id", oAuthInfo.clientId)
             .add("client_secret", oAuthInfo.clientSecret)
             .add("redirect_uri", oAuthInfo.redirectUri)
+            .add("grant_type", "authorization_code")
             .build()
 
-        val headers = mapOf("Accept" to "application/json")
+        val headers = mapOf(
+            "Accept" to "application/json"
+        )
         val jsonString = httpClient.POST(tokenURL, headers, body)
 
         val response = JsonUtil.decodeFromJson(jsonString, GoogleTokenResponse.serializer())
@@ -42,7 +45,10 @@ class GoogleAuthService(
     }
 
     override fun getUserInfo(accessToken: String): OAuth2UserResponse {
-        val headers = mapOf("Content-Type" to "application/json", "Authorization" to "Bearer $accessToken")
+        val headers = mapOf(
+            "Content-Type" to "application/json",
+            "Authorization" to "Bearer $accessToken"
+        )
 
         val jsonString = httpClient.GET(userInfoURL, headers)
         val response = JsonUtil.decodeFromJson(jsonString, GoogleUserResponse.serializer())

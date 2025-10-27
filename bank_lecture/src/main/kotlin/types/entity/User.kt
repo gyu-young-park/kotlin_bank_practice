@@ -11,11 +11,8 @@ import java.time.LocalDateTime
 @Table(name="user")
 data class User(
     @Id
-    @Column(name = "ulid", length = 12, nullable = false)
+    @Column(name = "ulid", length = 26, nullable = false)
     val ulid: String,
-
-    @Column(name = "platform", nullable = false, precision = 15, scale = 2)
-    val platform: String,
 
     @Column(name = "username", length = 100, nullable = false, unique = true)
     val username: String,

@@ -1,0 +1,33 @@
+jwt:
+  secret-key: "lecture"
+  time: 30
+
+oauth2:
+  providers:
+    google:
+      client-id: "74993370145-de0ho8dp017mjq40gamforgqnbnitf79.apps.googleusercontent.com"
+      client-secret: "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"
+      redirect-uri: "http://localhost:9091/api/v1/auth/callback"
+    github:
+      client-id: "Ov23liTPESiTJHZD8hty"
+      client-secret: "54acf2532e25122b7486e7e511022edbaa7592da"
+      redirect-uri: "http://localhost:9091/api/v1/auth/callback"
+
+database:
+  mysql:
+    url: jdbc:mysql://localhost:3306/bank?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 9091

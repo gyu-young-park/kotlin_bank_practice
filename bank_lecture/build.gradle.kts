@@ -2,6 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.21"
     kotlin("plugin.spring") version "1.8.0"
     kotlin("plugin.serialization") version "1.8.0"
+    kotlin("plugin.jpa") version "1.9.22"
     id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
 }
@@ -34,6 +35,9 @@ dependencies {
 
     // http client
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // ulid
+    implementation("com.github.f4b6a3:ulid-creator:5.2.3")
 }
 
 kotlin {
