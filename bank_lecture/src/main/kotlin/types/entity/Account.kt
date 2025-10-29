@@ -29,5 +29,8 @@ data class Account(
 
     @ManyToOne(fetch = FetchType.LAZY) // 사용할 때만 가져오기, 이렇게 만드는 것이 효율이 좋다.
     @JoinColumn(name = "user_ulid", nullable = false)
-    val user: User
+    val user: User,
+
+    @Column(name = "deleted_at", nullable = true)
+    val deletedAt: LocalDateTime? = null,
 )

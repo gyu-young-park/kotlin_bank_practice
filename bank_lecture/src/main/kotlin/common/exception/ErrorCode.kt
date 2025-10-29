@@ -15,5 +15,9 @@ enum class ErrorCode(
     PROVIDER_NOT_FOUND(-103, "provider not found"),
     TOKEN_IS_INVALID(-104, "token invalid"),
     TOKEN_IS_EXPIRED(-105, "token expired"),
-    FAILED_TO_INVOKE_IN_LOGGER(-106, "failed to invoke logger")
+    FAILED_TO_INVOKE_IN_LOGGER(-106, "failed to invoke logger"),
+    FAILED_TO_SAVE_DATA(-107, "failed to save data"),
+    FAILED_TO_FIND_ACCOUNT(-108, "failed to find account"),
+    MISS_MATCH_ACCOUNT_ULID_AND_USER_ULD(-109, "failed to match ulid"),
+    ACCOUNT_BALANCE_IS_NOT_ZERO(-110, "account balance is not zero"),
 }

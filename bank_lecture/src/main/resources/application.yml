@@ -5,12 +5,12 @@ jwt:
 oauth2:
   providers:
     google:
-      client-id: "74993370145-de0ho8dp017mjq40gamforgqnbnitf79.apps.googleusercontent.com"
-      client-secret: "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"
+      client-id: ""
+      client-secret: ""
       redirect-uri: "http://localhost:9091/api/v1/auth/callback"
     github:
-      client-id: "Ov23liTPESiTJHZD8hty"
-      client-secret: "54acf2532e25122b7486e7e511022edbaa7592da"
+      client-id: ""
+      client-secret: ""
       redirect-uri: "http://localhost:9091/api/v1/auth/callback"
 
 database:

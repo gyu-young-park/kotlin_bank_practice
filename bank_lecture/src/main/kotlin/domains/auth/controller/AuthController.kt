@@ -18,7 +18,6 @@ import java.net.URI
 class AuthController(
     private val authService: AuthService
 ) {
-
     @GetMapping("/callback")
     fun callback(
         @RequestParam("code", required = true) code: String,
