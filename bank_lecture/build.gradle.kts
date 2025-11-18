@@ -38,6 +38,10 @@ dependencies {
 
     // ulid
     implementation("com.github.f4b6a3:ulid-creator:5.2.3")
+
+    // redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+    implementation("org.redisson:redisson-spring-boot-starter:3.36.0")
 }
 
 kotlin {
